@@ -1,16 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <title>Giphy Party!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The next line is good for preventing mixed-content failures -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Giphy Party- SpringBoard 14.3.13</title>
+    <!-- Cache control -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
 
 <body>
+  <div id="tlc" class="container-fluid">
+    <h1 class="text-center text-white">GIPHY PARTY</h1>
+    <form id="theForm" role="form" class="d-flex justify-content-center">
+      <div class="form-row align-items-center">
+        <div class="col-sm-4">
+          <input type="text" id="query" id="search" name="search" class="form-control mx1" placeholder = "Enter a search term" autofocus />
+        </div>
+        <div class="col-sm-1">
+          <label for="amt" class="text-right" style="margin-bottom: 0rem !important; ">Quantity</label>
+        </div>
+        <div class="col-sm-3">
+          <input class="form-control" type="number" min=0 value=10 name="amt" id="amt"></imput>
+        </div>
+        <div class="col-sm-2">
+          <input id="search" type="submit" class="btn btn-success mx-1" value="Search Giphy!" />
+        </div>
+        <div class="col-sm-2">
+          <button id="remove" class="btn btn-danger text-white ml-2">Remove</button>
+        </div>
+      </div>
+    </form>
 
-<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-<script src="https://unpkg.com/axios/dist/axios.js"></script>
-<script src="app.js"></script>
+    <div id="image-area" class="row align-items-center"></div>
+  </div>
+
+  <!-- Bootstrap and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.js"></script>
 </body>
 
 </html>
